@@ -13,6 +13,7 @@ def get_weather_data(city):
         "units": "metric",  # Use metric for Celsius
     }
     response = requests.get(url, params=params)
+    st.write(API_KEY)
     if response.status_code == 200:
         return response.json()
     else:
